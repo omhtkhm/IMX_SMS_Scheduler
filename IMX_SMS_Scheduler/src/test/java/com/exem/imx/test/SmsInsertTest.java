@@ -53,15 +53,15 @@ public class SmsInsertTest {
 		map.put("user_name", "홍길동");
 		map.put("phone_number", "11112222");
 		
-		try {
-			smsInsert.query1(map);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			smsInsert.query1(map);
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 		final String testString = "오명훈";
         provideInput(testString);
