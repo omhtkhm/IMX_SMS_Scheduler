@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<IMXScheduler>
+ <intermax_repository>
+	  <db_type>postgres</db_type>
+	  <conn_ip>10.10.30.98</conn_ip>
+		<conn_port>5432</conn_port>
+		<sid>intermax</sid>
+		<user>intermax</user>
+		<password>intermax</password>
+ </intermax_repository>
+ 
+  <sms_db>
+	  <db_type>oracle</db_type>
+	  <conn_ip>10.10.102.97</conn_ip>
+		<conn_port>9521</conn_port>
+		<sid>orcl</sid>
+		<user>apm</user>
+		<password>interpass</password>
+ </sms_db>
+ 
+  <sms_metric>
+    <query1>select active_txns, txn_end_count from xapm_was_stat where was_id=30101 order by time desc limit 2</query1>
+  </sms_metric>
+  
+  <sms_table>
+    <sms_insert_query>INSERT INTO xm_sms_test ( user_name, phone_number, message, save_time ) VALUES ( '홍길동' , ? , ? , sysdate )</sms_insert_query>
+
+    <SMS_SET_BIND_VALUE>
+		<b1>p$active_txns$</b1>
+		<b2>p$txn_end_count$</b2>
+	</SMS_SET_BIND_VALUE>
+  </sms_table>
+
+</IMXScheduler>
