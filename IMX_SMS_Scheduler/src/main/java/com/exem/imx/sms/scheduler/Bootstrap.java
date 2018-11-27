@@ -1,6 +1,6 @@
 package com.exem.imx.sms.scheduler;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.exem.imx.dbquery.DbSelect;
  
@@ -13,7 +13,7 @@ public class Bootstrap {
     	System.out.println("[USAGE] : config file quartz2.2.1.xml : Batch Schedule Setting");
 		System.out.println("----------------------");
 		System.out.println("----------------------");
-        new ClassPathXmlApplicationContext("quartz2.2.1.xml");
+        new FileSystemXmlApplicationContext("quartz2.2.1.xml");
  
     }
  
